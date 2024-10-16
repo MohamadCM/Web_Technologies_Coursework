@@ -298,18 +298,16 @@ a:active {
 
 body, html {
   height: 100%;
+    overflow: hidden;
 }
 
 .map_image {
-  /* The image used */
-  background-image: url("../img/iran_map.jpg");
-  /* Full height */
   height: 100%;
+  max-height: 820px;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#iran-map {
+  height: 800px;
 }
 
 .circle {
@@ -318,7 +316,7 @@ body, html {
   background-color: #607D8B;
   opacity: 0.9;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%); /* Center the circle */
   display: flex;
   justify-content: center;
@@ -348,21 +346,21 @@ body, html {
 }
 
 #tehran {
-  top: 28%;
-  left: 45%;
+  top: 280px;
+  left: 500px;
 }
 
 #tabriz {
-  top: 10%;
-  left: 35%;
+  top: 190px;
+  left: 330px;
 }
 
 #isfahan {
-  top: 50%;
-  left: 47%;
+  top: 400px;
+  left: 520px;
 }
 
 #shiraz {
-  top: 70%;
-  left: 55%;
+  top: 530px;
+  left: 600px;
 }
