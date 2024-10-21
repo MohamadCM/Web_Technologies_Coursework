@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Dev 101 - Part 3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Web Technologies Ex. 3">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<header>
+</header>
+
+<div class="form-container">
+  <h2 style="text-align: center;">Registration Form</h2>
+  <form>
+    <label for="fname">First name:</label>
+    <br>
+    <input type="text" id="fname" name="fname" value="">
+    <br><br>
+
+    <label for="lname">Last name:</label>
+    <br>
+    <input type="text" id="lname" name="lname" value="">
+    <br><br>
+
+    <label for="email">Email:</label>
+    <br>
+    <input type="text" id="email" name="email" value="">
+    <br><br>
+
+    <input type="hidden" id="nickname" name="nickname" value="">
+
+    <label for="custom-date">Your date of birth:</label>
+    <br>
+    <input type="text" id="custom-date" placeholder="DD.MM.YYYY" maxlength="10">
+    <br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" onchange="togglePrivacyLink()" style="position:relative; left: 5px">
+      <option value="" disabled selected>Select your gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="prefer_not_to_say">Prefer not to say</option>
+    </select>
+
+    <br>
+    <div id="additionalLink" style="display: none">
+      <a href="https://example.com" target="_blank">Learn more about gender identity and our privacy policy</a>
+    </div>
+    <br><br>
+
+    <span>Education Level:</span>
+    <label class="radio-label">
+      <input type="radio" name="education" value="Post-Grad"> Post-Grad
+    </label>
+    <label class="radio-label">
+      <input type="radio" name="education" value="Graduate"> Graduate
+    </label>
+    <label class="radio-label" style="padding-bottom: 15px">
+      <input type="radio" name="education" value="High school"> High school
+    </label>
+    <br>
+
+    <label for="enableAddress">
+      <input type='checkbox' onclick='toggleAddress(this);' id="enableAddress">I want to enter my address
+    </label>
+    <br><br>
+
+    <div> <br></div>
+    <label for="address" class="radio-label" hidden="">Your address:</label>
+    <br>
+    <textarea id="address" name="address" rows="4" cols="50" disabled>Your address, e.g.: Number 32, 209312, Bratislava, SK</textarea>
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
