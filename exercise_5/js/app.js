@@ -23,6 +23,14 @@ nameInput.addEventListener('blur', () => {
 
 //Generate data
 function submitValues() {
+  const value = nameInput.value;
+  const isValid = checkInputValue(value);
+  if (!isValid) {
+    alert('Invalid value for name.')
+    nameInput.value = '';
+    return;
+  }
+  
   const date = new Date();
   const todayIndicator = document.getElementById("today-indicator");
   todayIndicator.innerHTML = `<span>` + "Today is " + date.toDateString() + "</span>";
