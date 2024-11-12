@@ -1,8 +1,10 @@
 const imageUploadElement = document.getElementById('imageUpload');
 const puzzleContainer = document.getElementById('puzzle-container');
+const moveCounterElement = document.getElementById('move-counter');
 let tiles = [];
 const ROWS = 4;
 const COLS = 4;
+let numberOfMoves = 0;
 let EMPTY_TILE_INDEX = ROWS * COLS - 1;
 
 imageUploadElement.addEventListener('change', loadImage);
@@ -75,6 +77,8 @@ function moveTile(event) {
       if (tile.classList.contains('blank')) EMPTY_TILE_INDEX = index;
     });
     if (checkWin()) alert('You solved the puzzle!');
+
+    increaseCounter();
   }
 }
 
@@ -87,4 +91,9 @@ function isAdjacent(index1, index2) {
 function checkWin() {
   return false;
   // return tiles.every((tile, index) => tile.dataset.index == index);
+}
+
+function increaseCounter(){
+    numberOfMoves++;
+    moveCounterElement.innerHTML = numberOfMoves;
 }
